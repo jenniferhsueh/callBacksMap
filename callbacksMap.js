@@ -1,8 +1,5 @@
 // var words = ["ground", "control", "to", "major", "tom"];
 // function map(words, callback) { //word callback is just a variable)
-//  var output = [];
-
-// } 
 
 var words = ["ground", "control", "to", "major", "tom"];
 

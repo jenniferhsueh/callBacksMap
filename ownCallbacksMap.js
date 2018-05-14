@@ -1,44 +1,30 @@
 var words = ["ground", "control", "to", "major", "tom"];
 
-function map(input_array, callback_function){
+function map(item, call){
   newArray = []
-  for(var i = 0, i < input_array; i++) {
-    callback_function(input_array[i]);
-    newArray.push(input_array[i]);
+  for(var i = 0; i < item.length; i++) {
+    newArray.push(call(item[i]));   //****
   }
-  console.log(newArray)
-  return newArray
+  // console.log(newArray);
+  return newArray;
 }
-// console.log(map());
+//console.log map????
 
-// map(words, function(word) {
-//  return word.length;
-// });
+var len = map(words, function(word) {
+  return word.length;
+});
+console.log(len);
 
-// map(words, function(word) {
-//  return word.toUpperCase();
-// });
 
-// map(words, function(word) {
-//  return word.split('').reverse().join('');
-// });
+var upperCase = map(words, function(word) {
+  return word.toUpperCase();
+});
+console.log(upperCase);
 
+var splitReverseJoin = map(words, function(word) {
+  return word.split('').reverse().join('');
+});
+console.log(splitReverseJoin);
 // [6, 7, 2, 5, 3]
-
 // [ "GROUND", "CONTROL", "TO", "MAJOR", "TOM" ]
-
 // [ 'dnuorg', 'lortnoc', 'ot', 'rojam', 'mot' ]
-
-// var words = ["ground", "control", "to", "major", "tom"];
-
-// map(words, function(word) {
-//   return word.length;
-// });
-
-// map(words, function(word) {
-//   return word.toUpperCase();
-// });
-
-// map(words, function(word) {
-//   return word.split('').reverse().join('');
-// });
