@@ -6,8 +6,8 @@
 
 var words = ["ground", "control", "to", "major", "tom"];
 
-const Len = words.map(function(word) {
-  // console.log(cb.length);    //to test
+const Len = words.map(function(word) {  //word is item in the array
+  // console.log(word.length);    //to test
   return word.length;
 });
 console.log(Len);
